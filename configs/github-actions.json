@@ -3,7 +3,6 @@
   "packageRules": [
     {
       "automerge": true,
-      "automergeType": "branch",
       "description": [
         "Auto merge Github Actions"
       ],
@@ -19,8 +18,7 @@
         "major",
         "minor",
         "patch"
-      ],
-      "pinDigests": false
+      ]
     }
   ]
 }
