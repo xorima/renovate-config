@@ -18,8 +18,7 @@
       "matchUpdateTypes": [
         "major",
         "minor",
-        "patch",
-        "digest"
+        "patch"
       ],
       "pinDigests": false
     }
