@@ -1,0 +1,11 @@
+{
+  "dependencyDashboard": false,
+  "extends": [
+    "config:best-practices",
+    "docker:enableMajor",
+    ":disableRateLimiting",
+    ":semanticCommits",
+    ":rebaseStalePrs",
+    ":automergePr"
+  ]
+}

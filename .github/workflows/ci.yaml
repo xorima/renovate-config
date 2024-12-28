@@ -1,0 +1,26 @@
+name: renovate-config-validator
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get config files
+        id: files
+        run: |
+          FILES=$(find configs/ -type f \( -name "*.json" -o -name "*.json5" \))
+          echo "::set-output name=files::$FILES"
+
+      - name: Validate Renovate config
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.1.0
+        with:
+          config_file_path: ${{ steps.files.outputs.files }}
