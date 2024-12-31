@@ -1,0 +1,63 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "automerge": true,
+      "description": [
+        "Auto merge Golang dependency updates"
+      ],
+      "ignoreTests": false,
+      "labels": [
+        "Type: Renovate"
+      ],
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "digest",
+        "pinDigest"
+      ]
+    },
+    {
+      "addLabels": [
+        "Release: Patch"
+      ],
+      "automerge": true,
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ]
+    },
+    {
+      "addLabels": [
+        "Release: Minor"
+      ],
+      "automerge": true,
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ]
+    },
+    {
+      "addLabels": [
+        "Release: Major"
+      ],
+      "automerge": true,
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ]
+}
