@@ -6,7 +6,8 @@
     ":disableRateLimiting",
     ":semanticCommits",
     ":rebaseStalePrs",
-    ":automergePr"
+    ":automergePr",
+    "group:allNonMajor"
   ],
   "labels": [
     "Type: Renovate"
